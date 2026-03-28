@@ -1,5 +1,6 @@
 export type HabitsType = {
     id: number,
     content: string,
-    done: boolean
+    priority: number,
+    done: boolean,
 };
