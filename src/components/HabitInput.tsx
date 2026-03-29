@@ -1,17 +1,18 @@
 import { useState } from "react";
 
 type Props = {
-    addHabit: (text: string) => void;
+    addHabit: (text: string, priority: number) => void;
 };
 
 export const HabitInput = ({ addHabit }: Props) => {
     const [inputValue, setInputValue] = useState("");
+    const [priority, setPriority] = useState(1);
     
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
 
         if(inputValue.trim().length > 0) {
-            addHabit(inputValue);
+            addHabit(inputValue, priority);
             setInputValue("");
         }
     }
@@ -28,6 +29,16 @@ export const HabitInput = ({ addHabit }: Props) => {
                 onChange={(e) => setInputValue(e.target.value)}
                 placeholder="Digite o hábito aqui..."
             />
+
+            <select
+            className="outline-none"
+            value={priority}
+            onChange={(e) => setPriority(Number(e.target.value))}
+            >
+                <option value="0">Fácil</option>
+                <option value="1">Médio</option>
+                <option value="2">Difícil</option>
+            </select>
             
             <button
                 type="submit"
