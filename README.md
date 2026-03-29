@@ -34,12 +34,6 @@ Este projeto foi criado com o objetivo de praticar e consolidar conceitos fundam
 
 ---
 
-## 📸 Preview
-
-> Em breve (adicione prints aqui)
-
----
-
 ## 🧠 Aprendizados
 
 Durante o desenvolvimento deste projeto, foram reforçados conceitos como:
