@@ -6,7 +6,6 @@ import { HabitsList } from "../components/HabitsList";
 import { Header } from "../components/Header";
 import { Mention } from "../components/Mention";
 import { HabitsType } from "../types/HabitsType";
-import { Span } from "next/dist/trace";
 
 const Page = () => {
   const [habits, setHabits] = useState<HabitsType[]>([
@@ -50,7 +49,7 @@ const Page = () => {
 
       <HabitInput addHabit={addHabit} />
 
-      <h2 className="text-xl text-blue-600 font-bold uppercase ml-6 my-2">Seus Hábitos:</h2>
+      <h2 className="text-xl md:text-2xl text-blue-600 font-bold uppercase text-center my-2">Seus Hábitos:</h2>
       <HabitsList habits={habits} habitDone={habitDone} deleteHabit={deleteHabit} />
 
       <p className="text-center my-3 text-gray-400">

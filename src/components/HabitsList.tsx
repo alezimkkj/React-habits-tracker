@@ -9,11 +9,11 @@ type Props = {
 
 export const HabitsList = ({ habits, habitDone, deleteHabit }: Props) => {
   return (
-    <div className="flex flex-col items-center gap-5">
+    <div className="flex flex-col items-center gap-5 mx-5">
       {
         habits.map(item => {
           return (
-            <div key={item.id} className="group w-85 flex items-center gap-5 p-4 border border-gray-300 rounded-lg shadow">
+            <div key={item.id} className="group container flex items-center gap-5 p-4 border border-gray-300 rounded-lg shadow">
               <input className="appearance-none h-5 w-5 border border-gray-300 rounded-sm checked:bg-blue-600 checked:border-transparent" type="checkbox" checked={item.done}
               onChange={() => habitDone(item.id)} />
               <p className="text-xl flex-1">{item.content}</p>
